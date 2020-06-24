@@ -15,4 +15,4 @@ notifications:
 # - mysql -e 'CREATE DATABASE IF NOT EXISTS forge;'
 script:
   #Test unitario y de integracion con cobertura (jacoco)
-  - mvn org.jacoco:jacoco-maven-plugin:prepare-agent verif
+  - mvn org.jacoco:jacoco-maven-plugin:prepare-agent verify

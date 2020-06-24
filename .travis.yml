@@ -8,11 +8,19 @@ notifications:
   email:
     recipients:
       - dreyesrod@gmail.com
+
 # services:
 # - mysql
 # - mongodb
 # before_install:
 # - mysql -e 'CREATE DATABASE IF NOT EXISTS forge;'
+
+addons:
+  sonarcloud:
+    organization: "dreyesrod-sonarcloud-organization"
+    token:
+      secure: "erMAsxydU3xa5ipxYArD4pGp/GCWF4DjVhDQkr9U88UYm4nWPDAtaes2AvUHxqW01C3+lmFVbPmo5qSHnXANdNTbxmzP0zgD1G1IukEJMfdARlB0018FFB19O790qOu2kCIAKPuOEY4N0qNrfAHq/Cej5aSy8KoN8w+dymj3EqbZJcsHg4CajIn6SLNG+LW3Lw09tse0xKQfzt6hOKRT7RHigT3hvp2mlsG/sFj0Zk5cC1YDFDGobnlQOSVb1YGYoyprWuZCHoQPtraFvS8i6vRKvpqpauTA60MGPTjaJFdTL+gO+mWz/MO1j9a0jgrhKgujp01SiKZ71CQJmzeRDZyz4YRloYU0ASrEDO400eu4SyHztm7/ZfIBDaHXr8dd3TVtJx9SPIqO2o11A29Z3wlC9R2dqMU7flg+hHq04BcIzGytRyWNupqUg7SxTNOH1O537t+SOVBVr/V+4e3XiOPWJOOB+2h+EbM8NkwSjey2Je4NjYJ0RdSxEcxGqpSYSf+0BENv2wwPPTKZsQ91rFdJJuLYI3z+Rz22Tipcigz/K68WxTErx4BfJ2Ctb1+82o6mJOFBJ8rhh1G/hGZspsgtiit4b/BqDcmHZUcGj08oyspyQMMJpDJTYyi+y6hpxOA1hTAlVoRe/nJuFDibHy7mf2uwwpslHQsG2dFhc1w="
+
 script:
-  #Test unitario y de integracion con cobertura (jacoco)
-  - mvn org.jacoco:jacoco-maven-plugin:prepare-agent verify
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=dreyesrod_ecosystem-demo

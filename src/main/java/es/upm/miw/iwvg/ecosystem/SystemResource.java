@@ -27,6 +27,8 @@ public class SystemResource {
 
     @GetMapping(value = VERSION)
     public String applicationInfo() {
+        System.out.println("{\"version\":\"" + this.applicationName + "::" +
+                this.buildVersion + "::" + this.buildTimestamp + "\"}");
         return "{\"version\":\"" + this.applicationName + "::" +
                 this.buildVersion + "::" + this.buildTimestamp + "\"}";
     }

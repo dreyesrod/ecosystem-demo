@@ -29,7 +29,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: $HEROKU
+    secure: "kQhYUkoZ22GdrbcppPbWtoelIcB+1Vfr3dsTjFP0jHgmaM8Rv5w7U+UtsXcGv6gUUZTYsVNuTOSepcjtZHbVasDLaSLOyOJ8eEDRzpqZ9O7mZP/bcYoa1NEKACPhOivYjrriZjXXswA8wd2rHLz0lrUYYWgBKEZazH3H8bYlC1YVmRxdNwVcwSRX0JUROffKOyUJkLboqGriMyWokuWj83O8vWH9yWgK8KNKTp1+aw05bBuxgV2rrBJ/cXsh4W+5qwOI7+CdJl/St3u8kbBPAc6Y5UlWhNUcfjB14bGo1U/cjlywcG2JAFp9/Iu5uoPadiTd8J0a5DeO9wdbb15gBGNw3EMk+mPZ6Frh1p55+ilvtc118giK6GSRPHO8h7Zkh0reM5uQunn0dII9tfyBJNrc6kqg57qCBui79ESPws9GIAqSNcutHA5LDRjeYnWFQ+m5cTS/5ERtsrqGLWbkNQX6PCIdHX9A+s1FiLwjPiBz6Al/Kg2MrQhNowBgA2gISgWqKYH8p6XA7ZyUXrlwWb2QLtzApYrl6/w5pENtdGQIEosRrpCjXwA8T2L1Pg89m507J0AKL09KyE6QHhnBNf7BPAZTCoUqOwHCJ7LfILYAG7otyqcgWAfgd5ggyA7kkPRu82vZE8PKT2MxbAfOf8jMSMhcPvRSX5554y9CpgI="
   on:
     branch: master
   app: dreyesrod-ecosystem-demo
